@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Trackpad container */
+.trck-container {
+  /* width: 40%; */
+  /* min-height: 60vh; */
+  margin-left: 20%;
+  padding: 20px;
+  /* position: relative; */
+}
+
+/* Trackpad stages container */
+.trackpad {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0;
+  position: relative;
+   width: 80%; 
+  margin: 0 auto;
+}
+
+/* Line connecting stages */
+.tracking-line {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+  z-index: -1;
+}
+
+/* Dot for each stage */
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+/* Position the dots vertically at each stage */
+.dot:nth-child(1) {
+  top: 10%;
+}
+.dot:nth-child(2) {
+  top: 30%;
+}
+.dot:nth-child(3) {
+  top: 50%;
+}
+.dot:nth-child(4) {
+  top: 70%;
+}
+.dot:nth-child(5) {
+  top: 90%;
+}
+
+/* Active dot */
+.dot.active {
+  background-color: #4caf50; /* Green for approved */
+}
+
+/* Canceled dot */
+.dot.cancelled {
+  background-color: #dc3545; /* Red for rejected */
+}
+
+/* Individual stage container */
+.stage {
+  background-color: #f4f7fc;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #ccc;
+  transition: all 0.3s ease;
+  position: relative;
+  width: 80%; /* Reduce the width of each stage */
+  margin: 0 auto;
+}
+
+/* Active stage (Green) */
+.stage.active {
+  border-left: 5px solid #4caf50;
+  background-color: #e0f7e0;
+}
+
+/* Cancelled stage (Red) */
+.stage.cancelled {
+  border-left: 5px solid #dc3545;
+  background-color: #f8d7da;
+}
+
+/* Stage Title */
+.status-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Stage Description */
+.stage p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Stage Description for cancelled stages */
+.stage.cancelled p {
+  color: #dc3545;
+}
+
+/* Stage Description for active stages */
+.stage.active p {
+  color: #4caf50;
+}

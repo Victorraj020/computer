@@ -1,0 +1,206 @@
+/* Base Styling */
+body {
+    background: #fefbec; 
+    /* background: linear-gradient(to right,#F9D689, #FFF7D1); */
+    /* background: linear-gradient(to right,#E5BA73, #FAEAB1); */
+    
+
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Header Section */
+.home-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(to right, #0e4ea5, #144b80);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-head h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.home-head nav {
+    display: flex;
+    gap: 20px;
+}
+
+.home-head nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.home-head nav a:hover {
+    background: white;
+    color: #0e4ea5;
+}
+
+/* Main Section */
+.home-two-main {
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+    align-items: start;
+    color: #333;
+}
+
+.home-two-farmer,
+.home-two-doctor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-two-farmer:hover,
+.home-two-doctor:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #0e4ea5, #1a73e8);
+    color: white;
+}
+
+#home-two-img1,
+#home-two-img2 {
+    margin: 20px 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid rgba(14, 78, 165, 0.1);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+#home-two-img1:hover,
+#home-two-img2:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+/* Buttons */
+#home-two-signin,
+#home-two-login {
+    border: none;
+    width: 120px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#home-two-signin {
+    background-color: #0e4ea5;
+    color: white;
+}
+
+#home-two-signin:hover {
+    background-color: #1a73e8;
+    transform: scale(1.1);
+}
+
+#home-two-login {
+    background-color: #e0e0e0;
+    color: #0e4ea5;
+}
+
+#home-two-login:hover {
+    background-color: #0e4ea5;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* FAQ and Chatbot Cards */
+.home-two-faq,
+.home-two-chatbot {
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.home-two-faq:hover,
+.home-two-chatbot:hover {
+    transform: translateY(-10px);
+    background: #f1f1f1;
+}
+
+/* Typography */
+#type-title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    color: #0e4ea5;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Footer (Optional for Completeness) */
+footer {
+    background: #0e4ea5;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0px -4px 10px rgba(197, 4, 4, 0.2);
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-head {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-head nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-two-main {
+        padding: 20px;
+    }
+
+    .home-two-farmer,
+    .home-two-doctor {
+        width: 100%;
+    }
+
+    #home-two-signin,
+    #home-two-login {
+        width: 100px;
+    }
+}

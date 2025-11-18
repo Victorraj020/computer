@@ -1,0 +1,106 @@
+/* General container styling */
+.incubator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  .incubator-head1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .incubator-para {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .incubator-head2 {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Form styles */
+  .incubator-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .incubator-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .incubator-input,
+  .incubator-select {
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .incubator-input:focus,
+  .incubator-select:focus {
+    border-color: #007bff;
+  }
+  
+  /* Button styles */
+  .incubator-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .incubator-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Password checklist styles */
+  .password-checklist {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .password-checklist li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .password-checklist .valid {
+    color: green;
+  }
+  
+  .password-checklist .invalid {
+    color: red;
+  }
+  
+  /* Error message styling */
+  .invalid-error {
+    font-size: 0.9rem;
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  

@@ -1,0 +1,179 @@
+/* Overall body background color */
+body {
+  background-color: #fefbec;
+  font-family: 'Poppins', sans-serif; /* Use a clean modern font */
+  color: #4a4a4a; /* Soft text color */
+}
+
+/* Style the container */
+.container-application {
+  max-width: 70vw; /* Center form with moderate width */
+  margin: 0 auto;
+  padding: 25px;
+  margin-top: 50px;
+  background-color: #fdfdfc; 
+  border: 2px solid #f8e1d5; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Rounded corners */
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container-application:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Header */
+.header {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333333; /* Slightly darker text for contrast */
+}
+
+/* Style the form groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #5a5a5a; /* Neutral label text */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 7px 12px;
+  border: 1px solid #f2d4c8;
+  border-radius: 8px;
+  background-color: #fef5eb; /* Light peach background */
+  color: #4a4a4a;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #fa7f72; /* Highlight border on focus */
+  box-shadow: 0 0 8px rgba(250, 127, 114, 0.3);
+}
+
+/* Inputs in read-only mode */
+.form-group input[readonly],
+.form-group select[readonly] {
+  background-color: rgba(255, 220, 210, 0.6); /* Subtle peach tone */
+  pointer-events: none;
+  cursor: not-allowed;
+  border: 1px dashed #fa7f72;
+}
+
+/* Error message styling */
+.error {
+  color: #ff4d4d; /* Red for errors */
+  font-size: 12px;
+}
+
+/* Edit Button */
+.edit-button {
+  padding: 10px 20px;
+  background-color: #0aa46b; /* Soft green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.edit-button.editable {
+  background-color: #49a349;
+  cursor: pointer;
+}
+
+.edit-button.editable:hover {
+  background-color: #357a35;
+  transform: scale(1.05);
+}
+
+/* Submit Button */
+button[type="submit"] {
+  padding: 12px 25px;
+  background-color: #4a90e2; /* Calming blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #10447c;
+  transform: scale(1.05);
+}
+
+/* Captcha */
+#captcha {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-left: 10px;
+  color: #333333; 
+}
+
+#captcha-regenerate {
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #5a5a5a;
+  color: white;
+  border-radius: 5px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#captcha-regenerate:hover {
+  background-color: #333333;
+  transform: scale(1.1);
+}
+
+/* Captcha container */
+.cap-cont {
+  background-color: #fcd5c4; 
+  align-items: center;
+  /* margin-left: 10px; */
+  /* width: 12vw; */
+  display: inline-block;
+  text-align: center;
+  padding: 4px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bluish Input */
+.bluish-input {
+  /* margin-top: 20px; */
+  width: 25%;
+  padding: 8px;
+  border: 2px solid #cce7ff;
+  border-radius: 8px;
+  background-color: #f5fbff;
+  color: #004d80;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.bluish-input:focus {
+  outline: none;
+  border-color: #2a82e4;
+  box-shadow: 0 0 12px rgba(42, 130, 228, 0.5);
+  background-color: #e8f5ff;
+}

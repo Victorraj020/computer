@@ -1,0 +1,154 @@
+.blogs-container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.blogs-container.dark {
+  background: #1e1e1e;
+  color: #f0f4f8;
+}
+
+.blogs-container.high-contrast {
+  background: #000;
+  color: #ffd700;
+}
+
+/* Add more styles... */
+
+
+.dark-mode {
+  background: #1e1e1e;
+  color: #f0f4f8;
+}
+
+.dark-mode .blog-card {
+  border-color: #333;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-and-filters input,
+.search-and-filters select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.search-and-filters input:focus,
+.search-and-filters select:focus {
+  border-color: #007bff;
+}
+
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.blog-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  width: 30%;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.blog-info {
+  padding: 10px;
+}
+
+.blog-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.blog-info span {
+  color: gray;
+  font-size: 14px;
+}
+
+.blog-detail {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  background: #fff;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #0056b3;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.videos-section {
+  margin-top: 40px;
+}
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-card {
+  width: 30%;
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.dark-mode .back-button {
+  background: #f0f4f8;
+  color: #333;
+}
+
+.dark-mode .tag {
+  background: #333;
+}

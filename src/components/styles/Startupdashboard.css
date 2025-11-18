@@ -1,0 +1,66 @@
+.startup-dsh-nav-bar{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   /* gap:80px; */
+   height: 8vh;
+   padding:8px;
+   align-items: center;
+   box-sizing: border-box;
+   font-weight:bold;
+   cursor:pointer;
+   background-color: #f0f0f0; 
+}
+.startup-dsh-nav-left{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   font-size: 1.1rem;
+   padding: 10px 20px;
+   gap:20px;
+}
+ .startup-dsh-nav-left p:hover {
+   border-bottom: 2px solid #ccc; 
+ }
+ .active-tab {
+   padding: 5px;
+   background-color: rgba(54, 54, 54, 0.788);
+   color: rgb(255, 255, 255);
+   font-weight: bold;
+    border-bottom: 3px solid #000; /* Customize the border style */
+    padding-bottom: 5px; /* Adjust the padding to give space between text and border */
+}
+
+.startup-dsh-nav-left p {
+   cursor: pointer;
+   text-decoration: none; /* Remove underlines */
+   padding: 10px 15px; /* Add some padding for better spacing */
+   border-radius: 5px; /* Optional: rounded corners */
+   margin-right: 10px;
+}
+
+.startup-dsh-nav-right {
+   margin-left: auto; /* Pushes the logout button to the far right */
+}
+.sttup-head{
+   
+   text-align: center;
+   font-size: 2rem;
+   font-weight: bold;
+   margin:10px;
+   color:black;
+}
+
+.all-tab-cont{
+   overflow: auto;
+}
+
+/* .startup-right-hover p{
+   margin: 15px 0;
+} */
+
+.startup-right-hover p:hover{
+   background: #d7d3bf;
+   border-radius: 2px;
+   padding: 4px 0;
+}

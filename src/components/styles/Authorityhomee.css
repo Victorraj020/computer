@@ -1,0 +1,132 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #fefbec; /* Background color */
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .auth-total {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .sect-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .auth-hm {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1c3d59; /* Darker blue for headings */
+    margin-bottom: 15px;
+  }
+  
+  .status-description {
+    font-size: 1.1rem;
+    color: #5d7d8b; /* Soft blue-grey for descriptions */
+    margin-bottom: 15px;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+    color: #e74c3c; /* Red for no data found */
+    text-align: center;
+  }
+  
+  .sect-container > div {
+    max-height: 400px;
+    overflow-y: auto; /* Ensure no content overflows */
+  }
+  
+  /* Styling for the sections */
+  .pending {
+    background-color: #f0f8ff;
+    border-left: 6px solid #1c3d59; /* Dark blue left border */
+  }
+  
+  .rejected {
+    background-color: #ffe4e1;
+    border-left: 6px solid #e74c3c; /* Red border for rejections */
+  }
+  
+  .accepted {
+    background-color: #e6ffe6;
+    border-left: 6px solid #27ae60; /* Green border for accepted */
+  }
+  
+  .assigned {
+    background-color: #f0f8ff;
+    border-left: 6px solid #3498db; /* Light blue for assigned */
+  }
+  
+  .licensed {
+    background-color: #d5fbd3;
+    border-left: 6px solid #2ecc71; /* Strong green for licensed */
+  }
+  
+  /* Card/Item hover effects */
+  .sect-container:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* PrintauthorList item styling */
+  .printauthor-list-item {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    border-left: 5px solid #3498db;
+    transition: background-color 0.3s ease;
+  }
+  
+  .printauthor-list-item:hover {
+    background-color: #e3e3e3;
+    cursor: pointer;
+  }
+  
+  .printauthor-list-item p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .printauthor-list-item .email {
+    color: #7f8c8d;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .auth-total {
+      width: 90%;
+    }
+  
+    .sect-container {
+      padding: 15px;
+    }
+  
+    .auth-hm {
+      font-size: 1.6rem;
+    }
+  
+    .status-description {
+      font-size: 1rem;
+    }
+  }
+  

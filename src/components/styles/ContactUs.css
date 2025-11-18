@@ -1,0 +1,207 @@
+/* Main Container */
+.contact-us-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background: var(--background-color, #f9f9f9);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px var(--card-shadow, rgba(0, 0, 0, 0.1));
+}
+
+/* Header Section */
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color, #0077b6);
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: var(--text-color, #555);
+}
+
+/* Contact Information */
+.contact-info {
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px var(--card-shadow, rgba(0, 0, 0, 0.1));
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color, #0077b6);
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: var(--text-color, #555);
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: var(--link-color, #0077b6);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Map Section */
+.map-section {
+  margin: 30px 0;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--card-shadow, rgba(0, 0, 0, 0.1));
+}
+
+/* Form Section */
+.form-section {
+  background: var(--card-bg, #fff);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--card-shadow, rgba(0, 0, 0, 0.1));
+}
+
+.form-section h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color, #0077b6);
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-color, #555);
+  margin-bottom: 5px;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-section button {
+  width: 100%;
+  padding: 12px 20px;
+  background:  #3b2505;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-section button:hover {
+  background: #70552e;
+}
+
+/* Success and Error Messages */
+.success-message {
+  color: #28a745;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Contact Cards Section */
+.contact-info {
+  display: flex; /* Enables flex container */
+  flex-wrap: nowrap; /* Prevents wrapping */
+  gap: 15px; /* Adds spacing between cards */
+  overflow-x: auto; /* Adds horizontal scrolling if necessary */
+  padding-bottom: 10px; /* Adds some spacing at the bottom for aesthetics */
+}
+
+.contact-information {
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px var(--card-shadow, rgba(0, 0, 0, 0.1));
+}
+
+.contact-card {
+  flex: 0 0 auto; /* Prevents the cards from shrinking and ensures they maintain their size */
+  width: 350px; /* Defines a consistent width for all cards */
+  background: var(--card-bg, #fff);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--card-shadow, rgba(0, 0, 0, 0.1));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.contact-card h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color, #0077b6);
+  margin-bottom: 5px;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: var(--text-color, #555);
+}
+
+.contact-card button {
+  padding: 10px 15px;
+  background: var(--secondary-color, #0077b6);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-card button:hover {
+  background: #54330b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-section button {
+    font-size: 0.9rem;
+  }
+
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+
+  .contact-header p {
+    font-size: 1rem;
+  }
+}

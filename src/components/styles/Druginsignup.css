@@ -1,0 +1,83 @@
+.Drug-sign-head1{
+  display: flex;
+  justify-content: center;
+ /* margin-top: 40px; */
+}
+.Drug-sign-head2{
+    padding-left: 15px;
+    padding-right: 15px;
+    /* background-color: gray; */
+    width:750px;
+}
+.Drug-sign-container {
+    width: 700px;
+    margin: 40px auto;
+    margin-top: 0;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+ .Drug-sign-para{
+  margin-bottom: 20px;
+  font-weight: bold ;
+  font-size: 30px;
+    margin-bottom: 0;
+   text-align: center;
+ }
+
+  .Drug-sign-label {
+    display: block;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .Drug-sign-input{
+    padding: 7px;
+  margin:0 0 15px 0;  
+  width: 100%;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #8b4a12;
+  transition: border-color 0.3s ease;
+  background: #f3f0f0;
+  }
+  
+  .Drug-sign-input[type="number"] {
+    width: 100%;
+    padding: 7px;
+    /* margin-bottom: 20px; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  background: #f3f0f0;
+
+  }
+  
+  .Drug-sign-button {
+    background-color: #534122;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Drug-sign-button:hover {
+    background-color: #ab9453;
+  }
+  .drug-flex{
+    display: flex;
+    flex-direction: row;
+    padding-top: 90px;
+  }
+  #drug-pic{
+    height:90vh;
+    width:25vw;
+    position: fixed;
+  }
+  #Drug-sign-id{
+    padding-left:600px;
+  }
+   

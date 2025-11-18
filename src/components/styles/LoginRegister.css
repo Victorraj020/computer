@@ -1,0 +1,184 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f9f9f9; */
+    color: #333;
+  }
+  
+  body.dark {
+    background-color: #121212;
+    color: #eaeaea;
+  }
+  
+  /* Heading Styling */
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  body.dark h1 {
+    color: #fff;
+  }
+  
+  /* Cards */
+  .card {
+    background: linear-gradient(135deg, #ffffff, #f3f3f3);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(255, 0, 0, 0.611);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(255, 0, 0, 0.149);
+  }
+  
+  body.dark .card {
+    background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card img {
+    border-radius: 12px 12px 0 0;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Buttons */
+  button {
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(to right, #4a90e2, #0062cc);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(to right, #0062cc, #004494);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background: white;
+    color: #333;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+  }
+  
+  .btn-secondary:hover {
+    background: #f0f0f0;
+    color: #000;
+  }
+  
+  /* Tooltip */
+  .tooltip {
+    position: absolute;
+    bottom: -25px;
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Dark Mode Button */
+  .dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  body.dark .dark-mode-toggle {
+    background: white;
+    color: #333;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+      margin: 10px auto;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .btn-primary,
+    .btn-secondary {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .btn-primary,
+    .btn-secondary {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
+  /* Organizations Section */
+.organization-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.organization-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+body.dark .organization-section h2 {
+  color: #eaeaea;
+}
