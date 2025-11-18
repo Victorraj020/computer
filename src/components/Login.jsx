@@ -2,25 +2,16 @@ import './styles/Login.css';
 import React, { useState,useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import Header from './Header';
-import doctorpic from '../assets/logindoctor.jpg';
-import startuppic from '../assets/regihaiyeh.jpg';
-import farmerpic from '../assets/loginfarmer.jpg';
-import drugpic from '../assets/logindrug.jpg';
-import authorpic from '../assets/loginauthority.jpg';
-
 import LoadingPage from './LoadingPage';
 
-function 
-Login(){
+function Login(){
   const [logit, setLogit] = useState({Email_ID:"  ",password:""});
   const [invalidtext, setInvalidtext] = useState("");
-  const [replacepic, setreplacepic] = useState();
-const [bringTheLoadingPage,setBringTheLoadingPage ]=useState(false);
+  const [bringTheLoadingPage,setBringTheLoadingPage ]=useState(false);
 
   const params=useLocation();
   let value=new URLSearchParams(params.search);
-  let usertype=value.get('value');
+  let usertype=value.get('value') || 'user';
   let invalid=false;
   const intake = usertype === "farmer" ? "phone number" : "email";
   const handleChange = (e) => {
@@ -76,84 +67,61 @@ const handelSubmit =async(e)=>{
   }
  
 }
-useEffect(() => {
-  
- if(usertype==='doctor')
-   setreplacepic(doctorpic);
- else if(usertype==='druginspector') 
-   setreplacepic(drugpic);
- else if(usertype==='farmer') 
-   setreplacepic(farmerpic);
-  else if(usertype==='authority')
-    setreplacepic(authorpic);
- else if(usertype==='startup')
-    setreplacepic(startuppic); 
-}, []);
+
+const getTitle = () => {
+  if(usertype==="authority") return "Government Login";
+  if(usertype==="druginspector") return "Gazette Officer Login";
+  return `${usertype.replace(/^./, str => str.toUpperCase())} Login`;
+};
+
+const getSignupLink = () => {
+  if(usertype==="authority") return "/signupauthority";
+  if(usertype==="druginspector") return "/signupdrug";
+  if(usertype==="farmer") return "/signupfarmer";
+  if(usertype==="doctor") return "/signupdoctor";
+  return "/signupstartup";
+};
+
   return(
-      <div className='login-total'>
-      <Header/>
-
-  { bringTheLoadingPage ? (
-    <LoadingPage text={"Loading..."}/>
-  ):(
-
-    <div className=' mt-36 lg:w-[80%] md:w-[80%] sm:w-[80%] w-100% h-[580px] mx-auto flex relative'>
-          <div className="w-[40%] h-[580px] bg-black lg:fixed md:fixed sm:hidden hidden">
-            {/* The blurred image */}
-            <img 
-              src={replacepic} 
-              className="w-full h-full object-cover opacity-90" 
-              alt="start-up img" 
-            />
-      
+    <div className='login-page'>
+      { bringTheLoadingPage ? (
+        <LoadingPage text={"Loading..."}/>
+      ):(
+        <div className='login-card'>
+          <div className='login-avatar'>
+            <div className='login-avatar-inner'></div>
           </div>
-
-        <div className=' w-[60%] h-[580px] flex items-center justify-center bg-white absolute right-0 top-0 pb-10'>
-           <form id=''onSubmit={handelSubmit}>
-            
-                  <div className="Login-container w-[500px] ">
-                        
-                        {usertype==="authority" ?  <p className="login-headin">{"Government Login"}</p> : 
-                        usertype==="druginspector"? <p className="login-headin">{"Gazette Officer Login"}</p> :
-                          <p className="login-headin">{usertype.replace(/^./, str => str.toUpperCase())} Login</p>
-                        }
-                        <div>
-                          <p className=' text-xl'>Welcome Back</p>
-                          <p className=' text-sm'>To keep connected with us please Login with your personal email and password</p>
-                        </div>
-                        <div className=' mt-8'>
-                          <div className=''>
-                             <label className="Login-label">Enter the {intake} </label>
-                             <input type="text" className="Login-input" name="Email_ID" required onChange={handleChange}/>
-                          </div>
-                          <div className=' -mt-3'>
-                             <label className="Login-label">Enter the password</label>
-                             <input type="password" className="Login-input" name="password" onChange={handleChange}/>
-                             { invalidtext && <p className="Login-error -mt-4">{invalidtext}</p>}
-                          </div>
-                        </div>
-
-                        {
-                            usertype==="authority"? <Link to="/signupauthority"><p className="login-headin"></p></Link> :
-                            usertype==="druginspector"?<Link to="/signupdrug"> <p className="login-headin"></p></Link> :
-                            <Link to="/signupstartup"><p className="">Don't have an account <span className=' underline'>Sign Up</span></p></Link>
-                        }
-                        {/* signupdrug */}
-                       
-                          <div className=' mt-4'>
-                              <button className="Login-button">Submit</button>
-                          </div>
-                  
-                  </div>
-
-                  
-            </form>
+          <p className="login-title">{getTitle()}</p>
+          <form className='login-form' onSubmit={handelSubmit}>
+            <div className='login-field'>
+              <label className="login-label">Email ID</label>
+              <div className='login-input-wrap'>
+                <span className='login-icon'>✉️</span>
+                <input type="text" className="login-input" name="Email_ID" required onChange={handleChange} placeholder="Email ID" />
+              </div>
+            </div>
+            <div className='login-field'>
+              <label className="login-label">Password</label>
+              <div className='login-input-wrap'>
+                <span className='login-icon'>🔒</span>
+                <input type="password" className="login-input" name="password" onChange={handleChange} placeholder="Password" />
+              </div>
+              { invalidtext && <p className="Login-error">{invalidtext}</p>}
+            </div>
+            <div className='login-utility'>
+              <label className='remember-wrap'>
+                <input type="checkbox" /> Remember me
+              </label>
+              <button type="button" className='forgot-btn'>Forgot Password?</button>
+            </div>
+            <button className="login-submit">LOGIN</button>
+          </form>
+          <Link to={getSignupLink()} className="login-signup">Signup / create new account</Link>
         </div>
-      </div>
       )
       }
-      </div>
-    );
+    </div>
+  );
 }
 export default Login;
 
