@@ -21,7 +21,7 @@ import Incubators from './components/Incubators.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import Blogs from './components/Blogs.jsx';
 import ContactUs from './components/ContactUs.jsx';
-import Logincards from './components/logincards.jsx';
+import Logincards from './components/Logincards.jsx';
 import FakeLogin from './components/FakeLogin.jsx';
 
 function App() {
